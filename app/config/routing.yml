@@ -1,0 +1,8 @@
+app:
+    resource: '@AppBundle/Controller/'
+    type: annotation
+test:
+    path:     '/test/{id}'
+    defaults: { _controller: AppBundle:Default:test }
+    requirements:
+        id: \d+
