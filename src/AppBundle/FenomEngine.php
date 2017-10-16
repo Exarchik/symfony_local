@@ -21,14 +21,10 @@ class FenomEngine implements EngineInterface
     public function render($name, array $parameters = array())
     {
         //$kernel = new AppKernel();
-        $mainTpl =  "D:\\OS\\OSPanel\\domains\\localhost\\symfony_local\\templates";
-        $tmpTpl = "D:\\OS\\OSPanel\\domains\\localhost\\symfony_local\\tmp";
-        //$mainTpl = "../../templates";
-        //$mainTpl = $this->getParameter('kernel.project_dir');
-       
+        //print_r([MAIN_DIR,MAIN_TEMPLATES,MAIN_TMP]);
         //print realpath($mainTpl); die();
         
-        $fenom = Fenom\Extra::factory($mainTpl, $tmpTpl);
+        $fenom = Fenom\Extra::factory(MAIN_TEMPLATES, MAIN_TMP);
         $fenom->fetch($name, $parameters);
         return $fenom->display($name, $parameters);
     }
