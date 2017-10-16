@@ -25,6 +25,9 @@ class FenomEngine implements EngineInterface
         //print realpath($mainTpl); die();
         
         $fenom = Fenom\Extra::factory(MAIN_TEMPLATES, MAIN_TMP);
+        
+        #$callback = [];
+        #$data = $fenom->pipe($name, $callback, $parameters);
         $fenom->fetch($name, $parameters);
         return $fenom->display($name, $parameters);
     }
