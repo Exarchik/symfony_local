@@ -28,6 +28,7 @@ class FenomEngine implements EngineInterface
         
         #$callback = [];
         #$data = $fenom->pipe($name, $callback, $parameters);
+        #print $fenom->getTemplate($name);
         $fenom->fetch($name, $parameters);
         return $fenom->display($name, $parameters);
     }

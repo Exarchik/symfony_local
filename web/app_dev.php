@@ -7,6 +7,7 @@ use Symfony\Component\HttpFoundation\Request;
 define('MAIN_DIR',realpath(dirname(__FILE__).'/..'));
 define('MAIN_TEMPLATES',MAIN_DIR.'/templates');
 define('MAIN_TMP',MAIN_DIR.'/tmp');
+
 // If you don't want to setup permissions the proper way, just uncomment the following PHP line
 // read https://symfony.com/doc/current/setup.html#checking-symfony-application-configuration-and-setup
 // for more information

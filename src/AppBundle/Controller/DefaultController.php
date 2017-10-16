@@ -27,7 +27,7 @@ class DefaultController extends Controller
         return $this->render('default/reform.ihtml', [
             'base_dir' => realpath($this->getParameter('kernel.project_dir')).DIRECTORY_SEPARATOR,
 			'id' => $id,
-            'massiveData' => ['key',34,'some-data','information']
+            'massiveData' => ["key-".$id,$id,"some-data[$id]",'information']
         ]);
 	}
 	
