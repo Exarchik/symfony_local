@@ -20,7 +20,7 @@ class FenomEngine implements EngineInterface
      */
     public function render($name, array $parameters = array())
     {
-        //$kernel = new AppKernel();
+        //$kernel = new AppKernel(); 
         //print_r([MAIN_DIR,MAIN_TEMPLATES,MAIN_TMP]);
         //print realpath($mainTpl); die();
         
