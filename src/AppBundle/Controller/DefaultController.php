@@ -24,9 +24,10 @@ class DefaultController extends Controller
 	public function testAction($id)
 	{
 		//return $this->render('default/test.html.twig', [
-        return $this->render('default/index.ihtml', [
+        return $this->render('default/reform.ihtml', [
             'base_dir' => realpath($this->getParameter('kernel.project_dir')).DIRECTORY_SEPARATOR,
 			'id' => $id,
+            'massiveData' => ['key',34,'some-data','information']
         ]);
 	}
 	

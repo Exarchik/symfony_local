@@ -1,0 +1,11 @@
+<div>
+    <b>{$base_dir}</b>
+    <br />
+    <div>{$id}</div>
+    <br />
+    <ul>
+        {foreach $massiveData as $item}
+            <li>{$item}</li>
+        {/foreach}
+    </ul>
+</div>
