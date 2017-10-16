@@ -5,7 +5,8 @@ parameters:
 
 services:
     templating.engine.fenom:
-        class: AppBundle\FenomBridge
+        class: AppBundle\FenomEngine
+        arguments: ["@kernel"]
         
     # default configuration for services in *this* file
     _defaults:
