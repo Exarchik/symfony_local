@@ -6,6 +6,7 @@ use Symfony\Component\HttpKernel\Kernel;
 use Symfony\Component\Templating\EngineInterface;
 use Fenom;
 use Fenom\Extra;
+use AppBundle\AppBundle;
 
 class FenomEngine implements EngineInterface
 {
@@ -17,13 +18,19 @@ class FenomEngine implements EngineInterface
      * @param mixed $parameters
      * @return void
      */
-    public function render($name, array $parameters = array()){
+    public function render($name, array $parameters = array())
+    {
+        //$kernel = new AppKernel();
+        $mainTpl =  "D:\\OS\\OSPanel\\domains\\localhost\\symfony_local\\templates";
+        $tmpTpl = "D:\\OS\\OSPanel\\domains\\localhost\\symfony_local\\tmp";
+        //$mainTpl = "../../templates";
+        //$mainTpl = $this->getParameter('kernel.project_dir');
+       
+        //print realpath($mainTpl); die();
         
-        $mainTpl =  "../../templates";
-        
-        $fenom = Fenom\Extra::factory($name, $mainTpl, $parameters);
-        
-        return $fenom;
+        $fenom = Fenom\Extra::factory($mainTpl, $tmpTpl);
+        $fenom->fetch($name, $parameters);
+        return $fenom->display($name, $parameters);
     }
     
     public function exists($name){
